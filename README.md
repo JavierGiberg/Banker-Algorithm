@@ -7,13 +7,13 @@
  **The matrices must contain these details A B C D E
  **All the parameters must be entered, the code without handling exceptions!!
  
- <img width="474" alt="image" src="https://github.com/JavierGiberg/Banker-Algorithm/assets/92457719/c02cd7e4-1144-4e07-b238-954132341348">
+ <img width="474" alt="image" src="pic 1.jpg">
  
- <img width="382" alt="image" src="https://github.com/JavierGiberg/Banker-Algorithm/assets/92457719/4c9751ff-6870-4632-bd13-952b228d773d">
+ <img width="382" alt="image" src="pic 2.jpg">
 
 X = 1 --> Output:
 
-<img width="473" alt="image" src="https://github.com/JavierGiberg/Banker-Algorithm/assets/92457719/987032f9-dc82-4ede-8a1e-ae02ea35c2b4">
+<img width="473" alt="image" src="pic 3.jpg">
 
 
  
