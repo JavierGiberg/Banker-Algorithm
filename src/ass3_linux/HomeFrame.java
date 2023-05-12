@@ -1,9 +1,10 @@
 package ass3_linux;
-
+/*
+ * Javier Giberg
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
-import java.util.Scanner;
 import java.util.concurrent.Semaphore;
 
 public class HomeFrame {
@@ -236,125 +237,3 @@ public class HomeFrame {
 		}
 	}
 }
-//==============================================================================
-//
-//import javax.swing.*;
-//
-//import ass3_linux.main.Available;
-//import ass3_linux.main.P;
-//
-//import java.awt.*;
-//import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
-//import java.util.HashMap;
-//import java.util.concurrent.Semaphore;
-//
-//public class HomeFrame {
-//    private JFrame frame;
-//    private JTextField[] availableFields;
-//    private JTextField numOfProcessesField;
-//    private JTextArea outputArea;
-//
-//    public HomeFrame() {
-//        initialize();
-//    }
-//
-//    private void initialize() {
-//        frame = new JFrame();
-//        frame.setTitle("Swing Integration");
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setSize(400, 300);
-//        frame.setLocationRelativeTo(null);
-//
-//        JPanel mainPanel = new JPanel();
-//        mainPanel.setLayout(new BorderLayout());
-//
-//        JPanel inputPanel = new JPanel();
-//        inputPanel.setLayout(new FlowLayout());
-//
-//        availableFields = new JTextField[5];
-//        for (int i = 0; i < 5; i++) {
-//            availableFields[i] = new JTextField(5);
-//            inputPanel.add(availableFields[i]);
-//        }
-//
-//        numOfProcessesField = new JTextField(5);
-//        inputPanel.add(numOfProcessesField);
-//
-//        JButton runButton = new JButton("Run");
-//        runButton.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                runAlgorithm();
-//            }
-//        });
-//        inputPanel.add(runButton);
-//
-//        mainPanel.add(inputPanel, BorderLayout.NORTH);
-//
-//        outputArea = new JTextArea();
-//        outputArea.setEditable(false);
-//        JScrollPane scrollPane = new JScrollPane(outputArea);
-//        mainPanel.add(scrollPane, BorderLayout.CENTER);
-//
-//        frame.getContentPane().add(mainPanel);
-//    }
-//
-//    private void runAlgorithm() {
-//        Semaphore semaphore = new Semaphore(0, true);
-//        HashMap<Integer, String> runList = new HashMap<>();
-//        HashMap<Integer, String> deadlockList = new HashMap<>();
-//
-//        int[] createAvailable = new int[5];
-//        for (int i = 0; i < availableFields.length; i++) {
-//            createAvailable[i] = Integer.parseInt(availableFields[i].getText());
-//        }
-//
-//        Available available = new Available(createAvailable);
-//        int numOfProcesses = Integer.parseInt(numOfProcessesField.getText());
-//        P[] processTable = new P[numOfProcesses];
-//
-//        for (int i = 0; i < processTable.length; i++) {
-//            int[] allocation = new int[5];
-//            int[] max = new int[5];
-//            // Initialize allocation and max arrays according to your requirements
-//            processTable[i] = new P(available, max, allocation, semaphore, runList, deadlockList);
-//        }
-//
-//        semaphore.release(1);
-//
-//        for (P process : processTable) {
-//            new Thread(process).start();
-//        }
-//
-//        try {
-//            Thread.sleep(15000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        StringBuilder runProcessOutput = new StringBuilder("Run Process: ");
-//        for (String process : runList.values()) {
-//            runProcessOutput.append(process).append(", ");
-//        }
-//
-//        StringBuilder deadlockProcessOutput = new StringBuilder("Deadlock Process: ");
-//        for (Integer process : deadlockList.keySet()) {
-//            deadlockProcessOutput.append(process).append(", ");
-//        }
-//
-//        outputArea.setText(runProcessOutput.toString() + "\n" + deadlockProcessOutput.toString());
-//    }
-//
-//    public void show() {
-//        frame.setVisible(true);
-//    }
-//
-//    public static void main(String[] args) {
-//    	HomeFrame example = new HomeFrame();
-//        example.show();
-//    }
-//}
-//
-//
-//
-//

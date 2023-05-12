@@ -1,5 +1,7 @@
 package ass3_linux;
-
+/*
+ * Javier Giberg
+ */
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
