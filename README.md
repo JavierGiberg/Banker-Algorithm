@@ -1,6 +1,6 @@
 ﻿# Banker Algorithm - Javier Giberg - **import(javax.swing , java.awt , java.util.HashMap , java.util.concurrent.Semaphore)**
  
- <p> 1 file main ADT code without frame interface </p>
+ <h1> 1 file main ADT code without frame interface </h1>
  
  *2 flie HomeFrame swing interface
 
