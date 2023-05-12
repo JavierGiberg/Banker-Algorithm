@@ -48,7 +48,7 @@ public class main {
 		for (P process : processTable)
 			new Thread(process).start();
 		try {
-			Thread.currentThread().sleep(15000);
+			Thread.currentThread().sleep(2500);;
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

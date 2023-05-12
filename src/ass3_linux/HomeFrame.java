@@ -17,8 +17,8 @@ public class HomeFrame {
 
 	private static void createAndShowGUI() {
 
-        JFrame frame = new JFrame("Process Simulation");
-        frame.setSize(800, 800);
+        JFrame frame = new JFrame("Banker Algorithm");
+       
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel(new BorderLayout());
