@@ -54,7 +54,7 @@ public class HomeFrame {
         HashMap<Integer, String> deadlockList = new HashMap<>();
 
         /*
-         * Install params with I/O
+         * Install params with I/O.
          */
         char character = 'A';
 
