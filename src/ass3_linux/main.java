@@ -80,9 +80,9 @@ public class main {
 		private Available available;
 		private int[] Max;
 		private int[] Allocation;
-		Semaphore semaphore;
-		HashMap<Integer, String> RunList;
-		HashMap<Integer, String> DeadlockList;
+		private Semaphore semaphore;
+		private HashMap<Integer, String> RunList;
+		private HashMap<Integer, String> DeadlockList;
 
 		public P(Available available, int[] Max, int[] Allocation, Semaphore semaphore,
 				HashMap<Integer, String> RunList, HashMap<Integer, String> DeadlockList) {
@@ -137,16 +137,13 @@ public class main {
 					}
 				} catch (InterruptedException e) {
 					e.printStackTrace();
-				}
-//				
+				}				
 			}
 			System.out.println("P[" + id + "] DONE");
 			for (int i = 0; i < available.getAvailableSize(); i++)
 				System.out.println(available.getAvailable(i));
 			semaphore.release();
-
 		}
-
 		// -----------------------Run block------------------------------------------
 		/*
 		 * make Need Table
@@ -178,7 +175,6 @@ public class main {
 		public int getId() {
 			return id;
 		}
-
 	}
 	/*
 	 * class Available ( share resource )
@@ -198,10 +194,6 @@ public class main {
 		public synchronized int getAvailable(int i) {
 			return available[i];
 		}
-
-//		public synchronized void setAvailable(int[] available) {
-//			this.available = available;
-//		}
 
 		public int getAvailableSize() {
 			return available.length;

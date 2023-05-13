@@ -93,7 +93,7 @@ public class HomeFrame {
             new Thread(process).start();
 
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -114,8 +114,9 @@ public class HomeFrame {
             deadlockTextArea.setText(deadlockText.toString());
         });
     }
-
-
+	/*
+	 * class Process "P"
+	 */
 	static class P implements Runnable {
 		private static int count = 1;
 		private static int countLoop = 0;
@@ -125,9 +126,9 @@ public class HomeFrame {
 		private Available available;
 		private int[] max;
 		private int[] allocation;
-		Semaphore semaphore;
-		HashMap<Integer, String> runList;
-		HashMap<Integer, String> deadlockList;
+		private Semaphore semaphore;
+		private HashMap<Integer, String> runList;
+		private HashMap<Integer, String> deadlockList;
 
 		public P(Available available, int[] max, int[] allocation, Semaphore semaphore,
 				HashMap<Integer, String> runList, HashMap<Integer, String> deadlockList) {
@@ -141,7 +142,7 @@ public class HomeFrame {
 			this.runList = runList;
 			this.deadlockList = deadlockList;
 		}
-
+		//-----------------Run---------------------------------------
 		public void run() {
 			int equalFlag = 0;
 
@@ -186,7 +187,7 @@ public class HomeFrame {
 				System.out.println(available.getAvailable(i));
 			semaphore.release();
 		}
-
+		//-----------------Run---------------------------------------
 		private int[] needTableHandle() {
 			int[] makeTable = new int[available.getAvailableSize()];
 			for (int i = 0; i < makeTable.length; i++) {
@@ -215,6 +216,9 @@ public class HomeFrame {
 			return id;
 		}
 	}
+	/*
+	 * class Avialable
+	 */
 
 	static class Available {
 		private int[] available;
